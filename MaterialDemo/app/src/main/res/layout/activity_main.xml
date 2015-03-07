@@ -1,0 +1,99 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleMarginStart="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/tab_widget_tinting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="6dp"
+                    android:tag="0"
+                    android:text="Widget Tinting" />
+
+                <TextView
+                    android:id="@+id/tab_recyclerview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="6dp"
+                    android:tag="1"
+                    android:text="RecyclerView" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="180dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="102dp"
+            android:background="#FFC107"
+            android:contentDescription="@null" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_marginTop="104dp"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/nav_bar_shadow" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:orientation="vertical"
+        android:background="#424242"
+        android:layout_width="304dp"
+        android:clickable="true"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_drawer_bg"
+            android:contentDescription="@null" />
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
